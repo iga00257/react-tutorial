@@ -1,0 +1,32 @@
+.todo-list-item {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: $gray-background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    &-text {
+        font-size: 16px;
+    }
+
+    &-button {
+        padding: 5px;
+        color: $white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $orange-main;
+        }
+
+        &.delete {
+            background-color: $red-error;
+        }
+
+    }
+}

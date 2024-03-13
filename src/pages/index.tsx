@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
-  console.log("router:",router)
   return (
     <>
       <Head>
@@ -20,9 +19,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={cx('index')}> 
+      <div className={cx('index')}>
         index page
-
+        <div onClick={() => router.push('/counter')} className={cx('index-navigation')}>go to Counter</div>
         <div onClick={() => router.push('/todolist')} className={cx('index-navigation')}>go to todolist</div>
       </div>
     </>

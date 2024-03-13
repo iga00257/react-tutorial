@@ -1,0 +1,45 @@
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    gap: 20px;
+
+    .btn {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    &-value {
+        &-button {
+            background-color: $white;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+
+            &.plus {
+                background-color: $green-check;
+            }
+
+            &.minus {
+                background-color: $red-error;
+            }
+        }
+    }
+}

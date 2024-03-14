@@ -20,9 +20,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={cx('index')}>
-        index page
         <div onClick={() => router.push('/counter')} className={cx('index-navigation')}>go to Counter</div>
         <div onClick={() => router.push('/todolist')} className={cx('index-navigation')}>go to todolist</div>
+        <div onClick={() => router.push('/special-counter')} className={cx('index-navigation')}>go to special-counter</div>
       </div>
     </>
   );

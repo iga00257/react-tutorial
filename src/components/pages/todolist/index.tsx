@@ -1,37 +1,57 @@
-import { useState } from 'react'
-import styles from './style.module.scss'
 import classNames from 'classnames/bind'
+import { useState } from 'react'
+
+// component
+import TodoItem from './components/TodoItem'
+
+// style
+import styles from './style.module.scss'
+
+export type TTodoItem = {
+    id: number,
+    name: string,
+    done: boolean,
+}
+
 const cx = classNames.bind(styles)
 const todoListData = [
     {
+        id: 1,
         name: '學習 Component',
         done: false
     },
     {
+        id: 2,
         name: '學習 useState',
         done: false
     },
     {
+        id: 3,
         name: '學習 useEffect',
         done: false
     },
     {
+        id: 4,
         name: '學習 Props',
         done: false
     },
     {
+        id: 5,
         name: '學習 next.js',
         done: false
     },
     {
+        id: 6,
         name: '學習 Typescript',
         done: false
     },
     {
+        id: 7,
         name: '學習 Node.JS',
         done: false
     },
     {
+        id: 8,
         name: '學習 RestAPI',
         done: false
     },
@@ -41,6 +61,7 @@ const TodoListComponent = () => {
 
     const [todoList, setTodoList] = useState(todoListData)
     const [newTodo, setNewTodo] = useState('')
+
     return (
         <div className={cx('todo-list')}>
             <p className={cx('todo-list-title')}>Junior Frontend Learning Todo List</p>
@@ -52,7 +73,7 @@ const TodoListComponent = () => {
                         value={newTodo}
                         onChange={(event) => setNewTodo(event.target.value)} />
                     <button className={cx('todo-list-button', 'create')} onClick={() => {
-                        setTodoList([{ name: newTodo, done: false }, ...todoList])
+                        setTodoList([{ id: Math.random(), name: newTodo, done: false }, ...todoList])
                     }}>
                         Add
                     </button>
@@ -63,19 +84,7 @@ const TodoListComponent = () => {
                 {
                     todoList.map((todo, index) => {
                         return (
-                            <div key={index} className={cx('todo-list-item')}>
-                                <input type="checkbox" name="todo" id="todo" />
-                                <label htmlFor="todo">{todo.name}</label>
-                                <button
-                                    className={cx('todo-list-item-button', 'delete')}
-                                    onClick={() => {
-                                        console.log(todoList.filter((todo, i) => todo.name !== todo.name))
-                                        setTodoList(todoList.filter((oldTodo, i) => oldTodo.name !== todo.name))
-                                    }
-                                    }>
-                                    delete
-                                </button>
-                            </div>
+                            <TodoItem todo={todo} key={todo.id} setTodoList={setTodoList} />
                         )
                     }
                     )

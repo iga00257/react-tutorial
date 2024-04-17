@@ -19,11 +19,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={cx('index')}>
-        <div onClick={() => router.push('/counter')} className={cx('index-navigation')}>go to Counter</div>
-        <div onClick={() => router.push('/todolist')} className={cx('index-navigation')}>go to todolist</div>
-        <div onClick={() => router.push('/special-counter')} className={cx('index-navigation')}>go to special-counter</div>
-      </div>
     </>
   );
 }

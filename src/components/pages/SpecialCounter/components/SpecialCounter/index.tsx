@@ -33,7 +33,8 @@ export function useState(initVal: any) {
 
         setters.push(createSetter(cursor));
         // 執行完之後，將首次渲染值改為 false
-        firstRun = cursor < 2;
+        // firstRun = cursor < 2;
+        firstRun = false;
     }
 
     // 透過對應紀錄好的順序，可以取出該 setter 在陣列中的值

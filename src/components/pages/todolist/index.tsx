@@ -80,7 +80,7 @@ const TodoListComponent = () => {
                 </div>
             </div>
             {/* TodoList */}
-            <div >
+            <div>
                 {
                     todoList.map((todo, index) => {
                         return (

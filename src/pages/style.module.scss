@@ -1,17 +1,1 @@
-.index {
-    background-color: $pink-background;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: black;
-    gap: 20px;
-
-    &-navigation {
-        width: fit-content;
-        padding: 20px;
-        background-color: $gold;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-}
+.index {}

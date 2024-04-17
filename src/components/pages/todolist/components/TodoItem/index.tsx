@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import { TTodoItem } from '../..';
 import { useState } from 'react';
 
 // style
@@ -9,6 +8,11 @@ const cx = classNames.bind(styles);
 interface TodoItemProps {
     todo: TTodoItem,
     setTodoList: any
+}
+export type TTodoItem = {
+    id: number,
+    name: string,
+    done: boolean,
 }
 
 const TodoItem = ({ todo, setTodoList }: TodoItemProps) => {

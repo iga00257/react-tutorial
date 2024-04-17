@@ -7,11 +7,7 @@ import TodoItem from './components/TodoItem'
 // style
 import styles from './style.module.scss'
 
-export type TTodoItem = {
-    id: number,
-    name: string,
-    done: boolean,
-}
+
 
 const cx = classNames.bind(styles)
 const todoListData = [
